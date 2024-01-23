@@ -1,0 +1,58 @@
+.Main {
+    background: url("./../../img/main.png");
+    background-size:contain;
+    background-position: center top -100px;
+    background: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* На весь экран по вертикали */
+    align-items: flex-start;
+}
+  
+  .main__content {
+    position: top;
+    text-align: center;
+  }
+  
+  .main_img img {
+    width: 25%;
+    height: 25%;
+    border-radius: 239px;
+    margin-top: -170px;
+  }
+  
+  .main_header { 
+    margin-top: 276px;
+  }
+
+  .main_header h1 {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px #000000;
+  }
+  
+  .main_button { 
+    margin-top: 28px;
+  }
+
+  .main_button button {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    padding: 52px 50px;
+    background-color: #FF4D00;
+    color: #FFFFFF;
+    border-radius: 25px;
+    box-shadow: 0px 4px 24px 0px #000000;
+
+  }
+
+
+  
+
+
+
+
