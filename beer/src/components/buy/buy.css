@@ -1,4 +1,4 @@
-.Info {
+.Buy {
     display: flex;
     background: url("./../../img/background.png");
     background-size:contain;
@@ -13,16 +13,10 @@
     padding: 161px 82px;
 
   }
-  
+
   .info__textcontent {
     max-width: 893px;
   }
-
-  .info__img {
-    margin-top: -40px;
-    border-radius: 38px;
-
-}
   
   .info__img img {
     border-radius: 38px;
@@ -46,6 +40,8 @@
     border: 1px solid #FF008A; 
     border-radius: 25px;
     background-color: #282828;
+    box-shadow: 0px 4px 4px 0px #FF5D18;
+
   }
 
 
@@ -57,9 +53,22 @@
     font-size: 24px;
     line-height: 40px;
     text-align: left;
+  }
+
+  .buy__btn button {
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    padding: 52px 50px;
+    background-color: transparent;
+    color: #FF4D00;
+    border: solid 6px #FF4D00;
+    border-radius: 25px;
 
   }
 
+  
   .info_text-br {
     padding-bottom: 60px;
 
@@ -69,37 +78,19 @@
   @media (max-width: 1490px) {
     .info__content {
       display: flex;
-      column-gap: 80px !important;
+      column-gap: 228px;
       padding: 100px 52px;
         
     }
 
     .info__textcontent {
-      max-width: 600px;
+      max-width: 693px;
     }
 
+    .buy__btn button {
+        margin-top: 40px;
+        font-size: 26px;
+        padding: 32px 20px;
+      }
     
-  .info__header h2 {
-    font-size: 22px !important;
-  }
-
-  .info__text p {
-
-    font-size: 14px !important;
-  }
-
-  .info_text-br {
-    padding-bottom: 20px !important;
-
-  }
-
-  #info_header {
-    padding: 24px 30px !important;
-
-  }
-
-
-
-    
-
   }

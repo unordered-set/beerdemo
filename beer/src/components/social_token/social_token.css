@@ -69,36 +69,14 @@
   @media (max-width: 1490px) {
     .info__content {
       display: flex;
-      column-gap: 80px !important;
+      column-gap: 228px;
       padding: 100px 52px;
         
     }
 
     .info__textcontent {
-      max-width: 600px;
+      max-width: 693px;
     }
-
-    
-  .info__header h2 {
-    font-size: 22px !important;
-  }
-
-  .info__text p {
-
-    font-size: 14px !important;
-  }
-
-  .info_text-br {
-    padding-bottom: 20px !important;
-
-  }
-
-  #info_header {
-    padding: 24px 30px !important;
-
-  }
-
-
 
     
 

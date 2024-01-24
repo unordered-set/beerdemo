@@ -8,6 +8,7 @@
     justify-content: center;
     height: 100vh; /* На весь экран по вертикали */
     align-items: flex-start;
+    margin-bottom: -100px;
 }
   
   .main__content {
