@@ -50,6 +50,31 @@
 
   }
 
+  @media (max-width: 1490px) {
+
+    .Main {
+      margin-bottom: -100px;
+
+  }
+
+    .main_img img {
+      margin-top: -166px;
+    }
+    .main_header {
+      margin-top: 170px;
+
+    }
+
+    .main_header h1 {
+      font-size: 50px;
+    }
+
+    .main_button button {
+      font-size: 30px;
+      padding: 42px 40px;
+    }
+  }
+
 
   
 

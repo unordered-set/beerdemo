@@ -40,5 +40,22 @@
     align-items: center;
 }
 
+.header__links ul li a img {
+    width: 100%;
+
+}
 
 
+@media (max-width: 1490px) {
+
+    
+    .header__row {
+        column-gap: 34px;
+    }
+
+    .header__nav {
+        font-size: 18px;
+
+    }
+
+  }
