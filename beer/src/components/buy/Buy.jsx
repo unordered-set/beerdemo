@@ -4,7 +4,7 @@ import buyImg from './../../img/section_4.png'
 function Buy () {
     return (
         <section className='Buy'>
-        <div className="container">
+        <div className="buy__container">
             <div className="info__content">
                 <div className="info__textcontent">
                 <div className="info__header"><h2><span id='info_header'>HOW TO BUY</span></h2></div>
