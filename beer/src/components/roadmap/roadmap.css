@@ -94,3 +94,34 @@
       cursor: pointer;
   
     }
+
+    @media (max-width: 1490px) {
+
+      .roadmap__header {
+        margin-top: 148px;
+        margin-bottom: 54px; /* Пространство между token__header и token__table */
+      }
+
+      .roadmap__header h1 {
+        font-size: 32px;
+      }
+
+      .roadmap__table-text {
+        font-size: 30px;
+        line-height: 36px;
+        padding-top: 34px;
+        padding-bottom: 34px;
+            
+      }
+      .roadmap__btn {
+        margin-top: 28px; /* Пространство между token__table-subtitle и token__btn */
+      }
+
+      .roadmap__btn button {
+        font-size: 36px;
+        padding: 44px 42px;
+ 
+    
+      }
+  
+    }

@@ -84,7 +84,8 @@
 
   .info__text p {
 
-    font-size: 14px !important;
+    font-size: 16px !important;
+    line-height: 30px !important;
   }
 
   .info_text-br {

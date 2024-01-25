@@ -84,6 +84,15 @@
     
     
     @media (max-width: 1490px) {
+        .footer__header {
+
+            font-size: 30px;
+        }
+
+        .footer__subtitle {
+            font-size: 26px;
+    
+        }
     
         
         .footer__row {
