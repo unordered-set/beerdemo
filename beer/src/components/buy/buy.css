@@ -94,7 +94,7 @@
   }
 
 
-  @media (max-width: 1490px) {
+  @media (max-width: 1790px) {
     .info__content {
       display: flex;
       column-gap: 228px;
