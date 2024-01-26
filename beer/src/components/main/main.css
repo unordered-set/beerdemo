@@ -1,6 +1,6 @@
 .Main {
     background: url("./../../img/main.png");
-    background-size:contain;
+    background-size: contain;
     background-position: center top -100px;
     background: cover;
     display: flex;
@@ -76,6 +76,13 @@
     }
   }
 
+
+  @media (max-width: 1220px) {
+    .Main {
+        background-size: contain;
+        background-position: center top;
+    }
+}
 
   
 
