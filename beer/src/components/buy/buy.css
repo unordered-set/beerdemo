@@ -19,67 +19,82 @@
   justify-content: center;
   }
 
+
   .buy__container {
-      width: 100%;
-      margin: 0 auto;
-      z-index: 1;
+    z-index: 1;
 
+  }
+
+   
+    .buy__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 5%;
+      padding: 10% 5%;
+      height: 100%;
+  
+    }
+    
+    .buy__textcontent {
+      width: 50%;
+    }
+  
+    .buy__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 38px;
+      width: 50%;
+  }  
+    .buy__img img {
+      border-radius: 38px;
+      width: 80%;
+  
   }
   
-  .info__content {
-    display: flex;
-    column-gap: 88px;
-    padding: 161px 82px;
-
+  .buy__header {
+    margin-bottom: 10%;
   }
-
-  .info__textcontent {
-    max-width: 893px;
-  }
+   
+    .buy__header h2,
+    .buy__text p {
+      margin: 0;
+      color: white; 
+    }
   
-  .info__img img {
-    border-radius: 38px;
-
-}
-
-.info__header {
-  margin-bottom: 84px;
-}
-
   
-  .info__header h2,
-  .info__text p {
-    margin: 0;
-    color: white; 
-  }
-
-
-  #info_header {
-    padding: 44px 50px;
-    border: 1px solid #FF008A; 
-    border-radius: 25px;
-    background-color: #282828;
-    box-shadow: 0px 4px 4px 0px #FF5D18;
-
-  }
-
-
-  .info__header h2 {
-    font-size: 36px;
-  }
-
-  .info__text p {
-    font-size: 24px;
-    line-height: 40px;
-    text-align: left;
-  }
+    #buy_header {
+      padding: 4% 5%;
+      border: 1px solid #FF008A; 
+      border-radius: 25px;
+      background-color: #282828;
+      box-shadow: 0px 4px 4px 0px #FF5D18;
+    }
+  
+  
+  
+    .buy__header h2 {
+      font-size: 2vw;
+    }
+  
+    .buy__text p {
+      font-size: 1.2vw;
+      line-height: 1.5;
+    }
+  
+    .buy_text-br {
+      padding-bottom: 5%;
+  
+    }
+  
 
   .buy__btn button {
-    margin-top: 40px;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 40px;
-    padding: 52px 50px;
+    
+    margin-top: 10%;
+    font-size: 2vw;
+    line-height: 1.5;
+    padding: 4% 5%;
     background-color: transparent;
     color: #FF4D00;
     border: solid 6px #FF4D00;
@@ -87,29 +102,21 @@
 
   }
 
-  
-  .info_text-br {
-    padding-bottom: 60px;
 
-  }
 
 
   @media (max-width: 1790px) {
-    .info__content {
-      display: flex;
-      column-gap: 228px;
-      padding: 100px 52px;
-        
-    }
 
-    .info__textcontent {
-      max-width: 693px;
-    }
 
-    .buy__btn button {
-        margin-top: 40px;
-        font-size: 26px;
-        padding: 32px 20px;
-      }
+
+
+
     
+  }
+
+
+  @media (max-width: 1080px) {
+
+
+
   }

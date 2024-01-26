@@ -5,16 +5,16 @@ function Buy () {
     return (
         <section className='Buy'>
         <div className="buy__container">
-            <div className="info__content">
-                <div className="info__textcontent">
-                <div className="info__header"><h2><span id='info_header'>HOW TO BUY</span></h2></div>
-                <div className="info__text"><p className='info_text-br'>You can purchase $BEER in various different ways.</p>
+            <div className="buy__content">
+                <div className="buy__textcontent">
+                <div className="buy__header"><h2><span id='buy_header'>HOW TO BUY</span></h2></div>
+                <div className="buy__text"><p className='buy_text-br'>You can purchase $BEER in various different ways.</p>
 <p>
 We reccomend downloading Phantom Wallet, purchasing SOL, sending it to your phantom address and swapping using Phantom's in-app wallet.
 </p></div>
                 <div className="buy__btn"><button>Download PHANTOM</button></div>
             </div>          
-            <div className="info__img"><img src={buyImg} alt="info_img" /></div>                
+            <div className="buy__img"><img src={buyImg} alt="buy_img" /></div>                
             </div>
         </div>
     </section>

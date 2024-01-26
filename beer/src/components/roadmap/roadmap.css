@@ -125,3 +125,41 @@
       }
   
     }
+
+    @media (max-width: 1200px) {
+
+      .roadmap__header {
+        margin-top: 108px;
+        margin-bottom: 44px; /* Пространство между token__header и token__table */
+      }
+
+      .roadmap__header h1 {
+        font-size: 28px;
+      }
+
+      .roadmap__table-text {
+        font-size: 26px;
+        line-height: 32px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+            
+      }
+      .roadmap__btn {
+        margin-top: 24px; /* Пространство между token__table-subtitle и token__btn */
+      }
+
+      .roadmap__btn button {
+        font-size: 28px;
+        padding: 38px 36px;
+ 
+    
+      }
+  
+    }
+
+    @media (max-width: 1080px) {
+
+     
+    
+  
+    }

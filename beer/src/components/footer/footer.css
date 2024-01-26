@@ -105,3 +105,27 @@
         }
     
       }
+
+      @media (max-width: 1080px) {
+
+
+        .footer__header {
+
+            font-size: 20px;
+        }
+
+        .footer__subtitle {
+            font-size: 18px;
+    
+        }
+    
+        
+        .footer__row {
+            column-gap: 34px;
+        }
+    
+        .footer__nav {
+            font-size: 18px;
+    
+        }
+    }
