@@ -49,8 +49,12 @@
 @media (max-width: 1790px) {
 
     
-    .header__row {
-        column-gap: 34px;
+
+
+    .header__nav ul {
+
+        column-gap: 44px;
+
     }
 
     .header__nav {
@@ -59,3 +63,50 @@
     }
 
   }
+
+
+  @media (max-width: 1360px) {
+    .header__nav ul {
+
+        column-gap: 24px;
+
+    }
+
+
+    .header__nav {
+        font-size: 16px;
+
+    }
+
+    .header__links ul li a img {
+        width: 80%;
+    
+    }
+
+    .header__links ul {
+        column-gap: 10px;
+    }
+    
+  }
+
+
+
+  @media (max-width: 1080px) {
+    .header__nav ul {
+
+        column-gap: 20px;
+
+    }
+
+    .header__nav {
+        font-size: 14px;
+
+    }
+
+    .header__links ul li a img {
+        width: 70%;
+    
+    }
+
+  }
+

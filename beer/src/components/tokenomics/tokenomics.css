@@ -135,3 +135,48 @@
     }
 
   }
+
+  @media (max-width: 1220px) {
+
+    .token__header {
+      margin-top: 68px;
+      margin-bottom: 44px; /* Пространство между token__header и token__table */
+      
+    }
+
+    .token__header h1 {
+      font-size: 24px;
+    }
+
+    .token__table-text {
+      font-size: 20px;
+      line-height: 30px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+          
+    }
+
+    .token__table-subtitle {
+      margin-top: -10px;
+      font-size: 20px;
+      padding-top: 22px;
+      padding-bottom: 22px;
+      
+  
+    }
+
+    .token__btn button {
+      font-size: 28px;
+      padding: 22px 22px;
+
+    }
+
+    #token_header {
+      padding: 30px 30px;
+      font-size: 28px;
+
+  
+    }
+
+
+  }
