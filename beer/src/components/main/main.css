@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 100vh;
+  height: 100svh;
 }
 
 .main__logo {
@@ -32,7 +32,7 @@
   top: 0;
   left: 0;
   z-index: -1;
-  height: 100vh;
+  height: 100svh;
   padding-top: 100px;
   overflow: hidden;
 }
