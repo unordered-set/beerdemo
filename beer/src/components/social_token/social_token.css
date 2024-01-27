@@ -81,8 +81,15 @@
       flex-direction: column;
       gap: 25px;
     }
+
+    
+  .stoken__header h2 {
+    text-align: center;
+    font-size: 16px;
+  }
   
     .stoken__text p {
+      text-align: center;
       font-size: 14px;
     }
   }

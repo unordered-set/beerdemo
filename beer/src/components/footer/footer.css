@@ -1,7 +1,7 @@
 .Footer {
     background: url("./../../img/footer.webp") center top no-repeat;
     background-size: cover;
-    min-height: 92vh;
+    min-height: 92svh;
     display: flex;
     flex-direction: column; /* Изменено на flex-direction */
 }
@@ -19,113 +19,79 @@
 .footer__block {
     color: #ffff;
     background:rgba(22, 22, 22, 0.8);
-    height: 189px;
     width: 100%; /* Добавлено для занимания всей ширины контейнера */
     backdrop-filter: blur(10px);
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
     
     .footer__row {
         display: flex;
-        column-gap: 50px;
         align-items: center;
         justify-content: space-between;
+        margin: 0 5% 0 5%;
     }
-    
-    .footer__nav {
-        padding-top: 38px;
-        padding-left: 61px;
-        padding-bottom: 38px;
-        font-size: 24px;
-        font-weight: 400;
-        letter-spacing: 0em;
-    }
+
+
     
     .footer__nav ul {
         display: flex;
-        column-gap: 50px;
+        column-gap: 15%;
         align-items: center;
     }
     
     .footer__nav a {
         color: #ffff;
     }
-    
-    .footer__links {
-        padding-right: 96px;
-    }
-    
+        
     .footer__links ul {
         display: flex;
-        column-gap: 16px;
+        column-gap: 15%;
         align-items: center;
     }
     
-    .footer__links ul li a img {
-        width: 100%;
-    
-    }
 
     .footer__header {
-        padding: 38px 46px;
+        
+        font-size: 4vh;
+        padding: 30px 40px;
         border: 1px solid #FF008A; 
         border-radius: 25px;
         background-color: #282828;
         box-shadow: 0px 4px 4px 0px #FF5D18;
-        font-size: 36px;
     }
+
 
     .footer__subtitle {
-        font-size: 32px;
-
+        font-size: 3vh;
+        text-align: center;
+        line-height: 1.5;
     }
-    
 
 
-    
-    
-    @media (max-width: 1490px) {
-        .footer__header {
+    @media screen and (max-width: 767px) {
 
-            font-size: 30px;
+        .Footer {
+
+            min-height: 32svh;
+
+
         }
-
-        .footer__subtitle {
-            font-size: 26px;
-    
-        }
-    
-        
-        .footer__row {
-            column-gap: 34px;
-        }
-    
         .footer__nav {
-            font-size: 18px;
-    
+            display: none;
         }
-    
+        .footer__row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5% 0 5%;
+        }
+
+
+
+      
       }
-
-      @media (max-width: 1080px) {
-
-
-        .footer__header {
-
-            font-size: 20px;
-        }
-
-        .footer__subtitle {
-            font-size: 18px;
     
-        }
+
+
     
-        
-        .footer__row {
-            column-gap: 34px;
-        }
-    
-        .footer__nav {
-            font-size: 18px;
-    
-        }
-    }

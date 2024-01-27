@@ -104,14 +104,6 @@
 }
 
 
-
-
-@media (max-width: 1790px) {}
-
-
-@media (max-width: 1080px) {}
-
-
 @media screen and (max-width: 767px) {
   .Buy {
     height: auto;
@@ -123,7 +115,21 @@
     gap: 25px;
   }
 
+  .buy__header h2 {
+    text-align: center;
+    font-size: 16px;
+  }
+
   .buy__text p {
     font-size: 14px;
+    text-align: center;
+  }
+
+  .buy__btn {
+    text-align: center;
+  }
+
+  .buy__btn button {
+    font-size: 16px;
   }
 }
