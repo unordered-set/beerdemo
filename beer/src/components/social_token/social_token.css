@@ -1,7 +1,5 @@
 .SocialToken {
   display: flex;
-  background: url("./../../img/background.png") center top no-repeat;
-  background-size: cover; 
   height: 100vh;
   justify-content: center;
   }
@@ -17,7 +15,7 @@
   }
   
   .stoken__textcontent {
-    width: 50%;
+    width: 100%;
   }
 
   .stoken__img {
@@ -25,7 +23,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 38px;
-    width: 50%;
+    width: 100%;
 }  
   .stoken__img img {
     border-radius: 38px;
@@ -74,5 +72,17 @@
   }
 
   @media screen and (max-width: 767px) {
-
+    .SocialToken {
+      height: auto;
+    }
+  
+    .stoken__content {
+      height: auto;
+      flex-direction: column;
+      gap: 25px;
+    }
+  
+    .stoken__text p {
+      font-size: 14px;
+    }
   }

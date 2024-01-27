@@ -12,8 +12,6 @@
 .Roadmap {
     position: relative;
     display: flex;
-    background: url("./../../img/background.png") center top no-repeat;
-    background-size: cover; /* Заменено на cover */
     height: 100vh;
     justify-content: center;
 

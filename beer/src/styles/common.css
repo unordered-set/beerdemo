@@ -1,6 +1,8 @@
 body {
     font-family: 'Press Start 2P', sans-serif; 
     overflow-x: hidden;
+    background-color: black;
+    background: url("./../img/background.webp") center top;
 }
 
 .container {

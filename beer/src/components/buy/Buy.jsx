@@ -1,5 +1,5 @@
 import './buy.css'
-import buyImg from './../../img/section_4.png'
+import buyImg from './../../img/section_4.webp'
 
 function Buy () {
     return (

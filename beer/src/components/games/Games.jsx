@@ -1,5 +1,5 @@
 import './games.css'
-import gamesImg from './../../img/section_2.png'
+import gamesImg from './../../img/section_2.webp'
 
 function Games () { 
     return (

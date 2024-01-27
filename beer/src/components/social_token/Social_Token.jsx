@@ -1,5 +1,5 @@
 import './social_token.css'
-import stImg from './../../img/section_3.png'
+import stImg from './../../img/section_3.webp'
 
 function SocialToken () {
     return (

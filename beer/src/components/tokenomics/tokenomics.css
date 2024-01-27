@@ -1,183 +1,192 @@
 .Tokenomics {
   display: flex;
-  background: url("./../../img/background.png") center top no-repeat;
-  background-size: cover; /* Заменено на cover */
   height: 100vh;
   justify-content: center;
 }
 
-  .token__container {
-    color: #FFFFFF;
-    width: 96%;
-    margin: 0 auto;
-    text-align: center;
-    justify-content: center;
+.token__container {
+  color: #FFFFFF;
+  width: 96%;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
 }
 
+.token__header {
+  margin-top: 102px;
+  margin-bottom: 64px;
+  /* Пространство между token__header и token__table */
+}
+
+.token__header h1 {
+  font-size: 36px;
+}
+
+#token_header {
+  padding: 42px 48px;
+  border: 1px solid #FF008A;
+  border-radius: 25px;
+  background-color: #282828;
+  box-shadow: 0px 4px 4px 0px #FF5D18;
+
+}
+
+.token__table {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* Позволяет элементам переноситься на следующую строку при нехватке места */
+  /* max-width: 600px;  Максимальная ширина для поддержки уменьшения экрана */
+  margin: 0 auto;
+  /* Центрирование по горизонтали */
+}
+
+.token__table-text {
+  flex: 1;
+  /* Равномерное распределение пространства между элементами */
+  margin: 40px;
+  /* Пространство между элементами */
+  font-size: 36px;
+  line-height: 36px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 25px;
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 4px 4px 0px #FF5D18;
+
+}
+
+#p1 {
+  margin-bottom: 22px;
+}
+
+.token__table-subtitle {
+  font-size: 36px;
+  width: 100%;
+  /* Занимает всю ширину контейнера */
+  margin: 20px auto;
+  /* Пространство между token__table и token__table-subtitle */
+  border-radius: 25px;
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 4px 4px 0px #FF5D18;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 96%;
+  justify-content: center;
+
+
+
+}
+
+.token__btn {
+  margin-top: 52px;
+  /* Пространство между token__table-subtitle и token__btn */
+}
+
+
+.token__btn button {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  padding: 50px 48px;
+  background-color: #FF4D00;
+  color: #FFFFFF;
+  border-radius: 25px;
+  box-shadow: 0px 4px 24px 0px #000000;
+  cursor: pointer;
+
+}
+
+
+
+@media (max-width: 1790px) {
+
   .token__header {
-    margin-top: 102px;
-    margin-bottom: 64px; /* Пространство между token__header и token__table */
+    margin-top: 68px;
+    margin-bottom: 44px;
+    /* Пространство между token__header и token__table */
   }
 
   .token__header h1 {
-    font-size: 36px;
+    font-size: 32px;
+  }
+
+  .token__table-text {
+    font-size: 28px;
+    line-height: 36px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+  }
+
+  .token__table-subtitle {
+    margin-top: -10px;
+    font-size: 28px;
+    padding-top: 24px;
+    padding-bottom: 36px;
+
+
+  }
+
+  .token__btn {
+    margin-top: 28px;
+    /* Пространство между token__table-subtitle и token__btn */
+  }
+
+  .token__btn button {
+    font-size: 34px;
+    padding: 40px 38px;
+
+
+  }
+
+}
+
+@media (max-width: 1220px) {
+
+  .token__header {
+    margin-top: 68px;
+    margin-bottom: 44px;
+    /* Пространство между token__header и token__table */
+
+  }
+
+  .token__header h1 {
+    font-size: 24px;
+  }
+
+  .token__table-text {
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+  }
+
+  .token__table-subtitle {
+    margin-top: -10px;
+    font-size: 20px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+
+  }
+
+  .token__btn button {
+    font-size: 28px;
+    padding: 22px 22px;
+
   }
 
   #token_header {
-    padding: 42px 48px;
-    border: 1px solid #FF008A; 
-    border-radius: 25px;
-    background-color: #282828;
-    box-shadow: 0px 4px 4px 0px #FF5D18;
-
-  }
-  
-  .token__table {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Позволяет элементам переноситься на следующую строку при нехватке места */
-   /* max-width: 600px;  Максимальная ширина для поддержки уменьшения экрана */
-    margin: 0 auto; /* Центрирование по горизонтали */
-  }
-  
-  .token__table-text {
-    flex: 1; /* Равномерное распределение пространства между элементами */
-    margin: 40px; /* Пространство между элементами */
-    font-size: 36px;
-    line-height: 36px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    border-radius: 25px;
-    background-color: #000000;
-    border: 1px solid #FFFFFF;
-    box-shadow: 0px 4px 4px 0px #FF5D18;
-
-  }
-
-  #p1 {
-    margin-bottom: 22px;
-  }
-  
-  .token__table-subtitle {
-    font-size: 36px;
-    width: 100%; /* Занимает всю ширину контейнера */
-    margin: 20px auto; /* Пространство между token__table и token__table-subtitle */
-    border-radius: 25px;
-    background-color: #000000;
-    border: 1px solid #FFFFFF;
-    box-shadow: 0px 4px 4px 0px #FF5D18;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    width: 96%;
-    justify-content: center;
-
-    
-
-  }
-  
-  .token__btn {
-    margin-top: 52px; /* Пространство между token__table-subtitle и token__btn */
-  }
-  
-
-.token__btn button {
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 40px;
-    padding: 50px 48px;
-    background-color: #FF4D00;
-    color: #FFFFFF;
-    border-radius: 25px;
-    box-shadow: 0px 4px 24px 0px #000000;
-    cursor: pointer;
-
-  }
-
-
-  
-  @media (max-width: 1790px) {
-
-    .token__header {
-      margin-top: 68px;
-      margin-bottom: 44px; /* Пространство между token__header и token__table */
-    }
-
-    .token__header h1 {
-      font-size: 32px;
-    }
-
-    .token__table-text {
-      font-size: 28px;
-      line-height: 36px;
-      padding-top: 24px;
-      padding-bottom: 24px;
-          
-    }
-
-    .token__table-subtitle {
-      margin-top: -10px;
-      font-size: 28px;
-      padding-top: 24px;
-      padding-bottom: 36px;
-      
-  
-    }
-    .token__btn {
-      margin-top: 28px; /* Пространство между token__table-subtitle и token__btn */
-    }
-
-    .token__btn button {
-      font-size: 34px;
-      padding: 40px 38px;
-
-  
-    }
-
-  }
-
-  @media (max-width: 1220px) {
-
-    .token__header {
-      margin-top: 68px;
-      margin-bottom: 44px; /* Пространство между token__header и token__table */
-      
-    }
-
-    .token__header h1 {
-      font-size: 24px;
-    }
-
-    .token__table-text {
-      font-size: 20px;
-      line-height: 30px;
-      padding-top: 24px;
-      padding-bottom: 24px;
-          
-    }
-
-    .token__table-subtitle {
-      margin-top: -10px;
-      font-size: 20px;
-      padding-top: 22px;
-      padding-bottom: 22px;
-      
-  
-    }
-
-    .token__btn button {
-      font-size: 28px;
-      padding: 22px 22px;
-
-    }
-
-    #token_header {
-      padding: 30px 30px;
-      font-size: 28px;
-
-  
-    }
+    padding: 30px 30px;
+    font-size: 28px;
 
 
   }
 
+
+}
