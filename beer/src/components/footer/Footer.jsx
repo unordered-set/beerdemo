@@ -16,8 +16,8 @@ function Footer (){
                         </ul>
                     </nav>
                     <div className="footer__links"><ul>
-                            <li><a href="#!"><img src={logoX} alt="" /></a></li>
-                            <li><a href="#!"><img src={logoTelegram} alt="" /></a></li>
+                            <li><a href="https://twitter.com/BeerTheHold"><img src={logoX} alt="" /></a></li>
+                            <li><a href="https://t.me/HoldtHeBeer"><img src={logoTelegram} alt="" /></a></li>
                         </ul></div>
                     
                 </div>
