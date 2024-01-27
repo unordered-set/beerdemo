@@ -2,7 +2,7 @@ import './roadmap.css'
 
 function Roadmap (){
     return (
-        <section className='Roadmap'>
+        <section className='Roadmap' id="roadmap">
             <div className="roadmap__container">
                 <div className="roadmap__header"><h1><span id='roadmap_header'>ROADMAP</span></h1></div>
                 <div className="roadmap__table">

@@ -2,11 +2,11 @@ import './tokenomics.css'
 
 function Tokenomics (){
     return (
-        <section className='Tokenomics'>
+        <section className='Tokenomics' id="tokenomics">
             <div className="token__container">
                 <div className="token__header"><h1><span id='token_header'>TOKENOMICS</span></h1></div>
                 <div className="token__table">
-                    <div className="token__table-text"><p id='p1'>Symbol</p><p>SBEER</p></div>
+                    <div className="token__table-text"><p id='p1'>Symbol</p><p>$BEER</p></div>
                     <div className="token__table-text"><p id='p1'>Tax</p><p>0</p></div>
                     <div className="token__table-text"><p id='p1'>Liquidity</p> <p>Burned Forever</p></div>
                 </div>

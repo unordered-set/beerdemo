@@ -11,9 +11,9 @@ function Header () {
                     <nav className="header__nav">
                         <ul>
                             <li><a href="#!">Buy</a></li>
-                            <li><a href="#!">Info</a></li>
-                            <li><a href="#!">Tokenomics</a></li>
-                            <li><a href="#!">RM</a></li>
+                            <li><a href="#info">Info</a></li>
+                            <li><a href="#tokenomics">Tokenomics</a></li>
+                            <li><a href="#roadmap">RM</a></li>
                         </ul>
                     </nav>
                     <div className="header__links"><ul>

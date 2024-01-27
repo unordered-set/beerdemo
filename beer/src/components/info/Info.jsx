@@ -3,7 +3,7 @@ import infoImg from './../../img/section_1.webp'
 
 function Info() {
     return (
-        <section className='Info'>
+        <section className='Info' id="info">
             <div className="container">
                 <div className="info__content">
                     <div className="info__textcontent">
