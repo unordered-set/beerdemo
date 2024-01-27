@@ -14,7 +14,7 @@ function Main() {
             </div>
             <div className="main__container">
                 <div className="main_header"><h1>Welcome to $BEER</h1></div>
-                <div className="main_button"><button>Buy $BEER</button></div>
+                <div className="main_button"><a href='https://raydium.io/swap/?inputCurrency=sol&outputCurrency=BEERx3e69rUB6vkqdMCHPJZRP1FrffsfgZZ41fCRqZDs&fixed=in'><button>Buy $BEER</button></a></div>
             </div>
         </section>
     )

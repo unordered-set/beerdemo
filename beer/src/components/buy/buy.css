@@ -40,6 +40,10 @@
   width: 100%;
 }
 
+#fhantom {
+  color:#FF4D00;
+}
+
 .buy__img {
   display: flex;
   justify-content: center;

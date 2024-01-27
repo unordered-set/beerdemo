@@ -10,7 +10,7 @@ function Header () {
                 <div className="header__row">
                     <nav className="header__nav">
                         <ul>
-                            <li><a href="#!">Buy</a></li>
+                            <li><a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=BEERx3e69rUB6vkqdMCHPJZRP1FrffsfgZZ41fCRqZDs&fixed=in">Buy</a></li>
                             <li><a href="#info">Info</a></li>
                             <li><a href="#tokenomics">Tokenomics</a></li>
                             <li><a href="#roadmap">RM</a></li>

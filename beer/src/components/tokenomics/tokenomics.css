@@ -64,9 +64,12 @@
     padding-bottom: 2%;
     width: 96%;
     justify-content: center;
+    word-wrap: break-word;   
 
-    
+  }
 
+  #tadress {
+    color: #fab090;
   }
   
   .token__btn {

@@ -10,7 +10,7 @@ function Roadmap (){
                     <div className="roadmap__table-text"><p id='r1'>Games</p><p>2024 q2</p></div>
                     <div className="roadmap__table-text"><p id='r1'>Bars collabs</p> <p>2024 q3-q4</p></div>
                 </div>
-                <div className="roadmap__btn"><button>Buy $BEER</button></div>    
+                <div className="roadmap__btn"><a href='https://raydium.io/swap/?inputCurrency=sol&outputCurrency=BEERx3e69rUB6vkqdMCHPJZRP1FrffsfgZZ41fCRqZDs&fixed=in'><button>Buy $BEER</button></a></div>    
 
 
             </div>

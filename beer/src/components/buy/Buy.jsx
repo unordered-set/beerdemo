@@ -12,7 +12,7 @@ function Buy () {
 <p>
 We reccomend downloading Phantom Wallet, purchasing SOL, sending it to your phantom address and swapping using Phantom's in-app wallet.
 </p></div>
-                <div className="buy__btn"><button>Download PHANTOM</button></div>
+                <div className="buy__btn"><a href='https://phantom.app/'><button id='fhantom'>Download PHANTOM</button></a></div>
             </div>          
             <div className="buy__img"><img src={buyImg} alt="buy_img" /></div>                
             </div>
