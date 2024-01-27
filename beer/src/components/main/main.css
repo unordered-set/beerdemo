@@ -60,6 +60,7 @@
   /* apply backdrop filter */
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
+  margin-bottom: 12%;
 }
 
 .main_header h1 {
