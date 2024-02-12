@@ -1,6 +1,6 @@
 import "./game.css";
 import coinImg from "./../../img/coin.svg";
-import beerImg from "./../../img/beercap.svg";
+
 import Lottie from "lottie-react";
 import AnimationBeer from "./AnimationBeer.json";
 import { useRef } from "react";
@@ -8,7 +8,17 @@ import { useRef } from "react";
 
 function Game() {
 
-  const lottieRef = useRef();
+  const lottieRefs = [
+    useRef(null),
+    useRef(null),
+    useRef(null)
+  ];
+
+  const playAnimation = (index) => {
+    if (lottieRefs[index].current) {
+      lottieRefs[index].current.play();
+    }
+  };
 
   return (
     <section className="Game">
@@ -48,9 +58,13 @@ function Game() {
           <div className="game__winner">
             <div className="game__winners_icon"><span>🥈</span></div>
             <div className="game__winners_cap">
-
-                {/* <div className="game__winners_capanime"><Lottie animationData={AnimationBeer} /></div> */}
-                <img src={beerImg} alt="" />
+            <div className="game__winners_capanime" onClick={() => playAnimation(0)}>
+                <Lottie animationData={AnimationBeer}
+                        lottieRef={lottieRefs[0]}
+                        loop={false}
+                        autoplay={false}
+                />
+              </div>
             </div>
             <div className="game__winners_place"></div>
             <div className="game__winners_points"><h1>543</h1></div>
@@ -59,13 +73,13 @@ function Game() {
           <div className="game__winner">
             <div className="game__winners_icon"><span>🏆</span></div>
             <div className="game__winners_cap">
-                <div className="game__winners_capanime">
-                  <Lottie animationData={AnimationBeer}
-                  lottieRef={lottieRef} 
-                        loop={true}
-                        />
-                </div>
-                {/* <img src={beerImg} alt="" /> */}
+            <div className="game__winners_capanime" onClick={() => playAnimation(1)}>
+                <Lottie animationData={AnimationBeer}
+                        lottieRef={lottieRefs[1]}
+                        loop={false}
+                        autoplay={false}
+                />
+              </div>
                 </div>
 
             <div className="game__winners_place"></div>
@@ -75,8 +89,14 @@ function Game() {
           <div className="game__winner">
             <div className="game__winners_icon"><span>🤡</span></div>
             <div className="game__winners_cap">
-                {/* <div className="game__winners_capanime"><Lottie animationData={AnimationBeer}/></div> */}
-                <img src={beerImg} alt="" />
+            <div className="game__winners_capanime" onClick={() => playAnimation(2)}>
+                <Lottie animationData={AnimationBeer}
+                        lottieRef={lottieRefs[2]}
+                        loop={false}
+                        autoplay={false}
+                        className="cap__animation"
+                />
+              </div>
             </div>
             <div className="game__winners_place"></div>
             <div className="game__winners_points"><h1>152</h1></div>

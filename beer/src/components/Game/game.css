@@ -103,7 +103,7 @@
     background-color: rgba(36, 36, 36, 1);
     font-size: 4vh;
     border-radius: 50%;
-    padding: 1%;
+    padding: 4%;
 }
 .game__winners_cap{
     display: flex;
@@ -136,6 +136,7 @@
     background-image: url(./placewinner.webp);
     background-size: cover;
     background-repeat: no-repeat;
+    height: 3vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,8 +153,10 @@
 
 .game__connect > h1 {
     background-color: #FF5D18;
+    font-size: 2.2vh;
     border-radius: 47px; 
-    padding: 2vh 3vh;
+    padding: 3vh 4vh;
+    font-weight: 400;
 }
 
 
@@ -213,6 +216,13 @@
         text-align: center;
         margin-bottom: 2vh;
     }
+
+    .game__winners_icon {
+
+        margin-bottom: 2vh;
+        border-radius: 50%;
+        padding: 10%;
+}
 
     .game__connect {
         margin-top: 2vh;
