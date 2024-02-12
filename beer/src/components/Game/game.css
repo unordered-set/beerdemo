@@ -100,11 +100,17 @@
 }
 
 .game__winners_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(36, 36, 36, 1);
     font-size: 4vh;
     border-radius: 50%;
     padding: 4%;
+    width: 8vh; /* Фиксированная ширина */
+    height: 8vh; /* Фиксированная высота */
 }
+
 .game__winners_cap{
     display: flex;
     justify-content: center;
@@ -218,11 +224,11 @@
     }
 
     .game__winners_icon {
-
+        width: 10vh; /* Фиксированная ширина для мобильных устройств */
+        height: 10vh; /* Фиксированная высота для мобильных устройств */
         margin-bottom: 2vh;
-        border-radius: 50%;
         padding: 10%;
-}
+    }
 
     .game__connect {
         margin-top: 2vh;
