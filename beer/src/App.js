@@ -7,6 +7,7 @@ import Buy from "./components/buy/Buy";
 import Tokenomics from "./components/tokenomics/Tokenomics";
 import Roadmap from "./components/roadmap/Roadmap";
 import Footer from "./components/footer/Footer";
+import Game from "./components/Game/Game";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
 
       <Header />
       <Main />
+      <Game />
       <Info />
       <Games />
       <SocialToken />
