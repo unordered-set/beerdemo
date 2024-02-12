@@ -111,6 +111,29 @@
     height: 8vh; /* Фиксированная высота */
 }
 
+.first {
+    border: 6px solid rgba(0, 150, 64, 1);
+    box-shadow: 0 0 20px rgba(0, 150, 64, 1);
+}
+
+.second {
+    border: 6px solid rgba(150, 0, 0, 1);
+    box-shadow: 0 0 20px rgba(150, 0, 0, 1); 
+}
+
+.third {
+    border: 6px solid rgba(188, 16, 182, 1);
+    box-shadow: 0 0 20px rgba(188, 16, 182, 1); 
+
+}
+
+
+
+.icon-border {
+    border: 10px solid transparent; /* Устанавливаем ширину границы в 3 раза */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Добавляем внешнее свечение */
+  }
+
 .game__winners_cap{
     display: flex;
     justify-content: center;
@@ -126,16 +149,28 @@
 .game__winners_capanime {
     width: 100%;
     margin-top: -18%;  
-
 }
 
 .game__winners_place {
     width: 100%;
-    background-color: rgba(0, 150, 64, 1);
-    height: 2vh;
+    height: 3vh;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
 }
+
+.first_place {
+    background-color: rgba(0, 150, 64, 1);;
+}
+
+.second_place {
+    background-color: rgba(150, 0, 0, 1);
+}
+
+.third_place {
+    background-color: rgba(188, 16, 182, 1);
+}
+
+
 
 .game__winners_points {
     width: 100%;
@@ -224,8 +259,8 @@
     }
 
     .game__winners_icon {
-        width: 10vh; /* Фиксированная ширина для мобильных устройств */
-        height: 10vh; /* Фиксированная высота для мобильных устройств */
+        width: 8vh; /* Фиксированная ширина для мобильных устройств */
+        height: 8vh; /* Фиксированная высота для мобильных устройств */
         margin-bottom: 2vh;
         padding: 10%;
     }

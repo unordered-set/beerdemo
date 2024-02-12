@@ -7,6 +7,7 @@ import { useRef } from "react";
 
 
 function Game() {
+  
 
   const lottieRefs = [
     useRef(null),
@@ -56,7 +57,7 @@ function Game() {
         <div className="game__winners">
 
           <div className="game__winner">
-            <div className="game__winners_icon"><span>🥈</span></div>
+            <div className="game__winners_icon first"><span>🥈</span></div>
             <div className="game__winners_cap">
             <div className="game__winners_capanime" onClick={() => playAnimation(0)}>
                 <Lottie animationData={AnimationBeer}
@@ -66,12 +67,12 @@ function Game() {
                 />
               </div>
             </div>
-            <div className="game__winners_place"></div>
+            <div className="game__winners_place first_place" id="winners_place0"></div>
             <div className="game__winners_points"><h1>543</h1></div>
           </div>
           
           <div className="game__winner">
-            <div className="game__winners_icon"><span>🏆</span></div>
+            <div className="game__winners_icon second"><span>🏆</span></div>
             <div className="game__winners_cap">
             <div className="game__winners_capanime" onClick={() => playAnimation(1)}>
                 <Lottie animationData={AnimationBeer}
@@ -82,12 +83,12 @@ function Game() {
               </div>
                 </div>
 
-            <div className="game__winners_place"></div>
+            <div className="game__winners_place second_place" id="winners_place1"></div>
             <div className="game__winners_points"><h1>302</h1></div>
           </div>
           
           <div className="game__winner">
-            <div className="game__winners_icon"><span>🤡</span></div>
+            <div className="game__winners_icon third"><span>🤡</span></div>
             <div className="game__winners_cap">
             <div className="game__winners_capanime" onClick={() => playAnimation(2)}>
                 <Lottie animationData={AnimationBeer}
@@ -98,7 +99,7 @@ function Game() {
                 />
               </div>
             </div>
-            <div className="game__winners_place"></div>
+            <div className="game__winners_place third_place" id="winners_place2"></div>
             <div className="game__winners_points"><h1>152</h1></div>
           </div>
 
