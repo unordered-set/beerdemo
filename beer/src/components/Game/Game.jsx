@@ -7,6 +7,10 @@ import { useRef } from "react";
 
 
 function Game() {
+
+  const cap20perc = [110, 111]; 
+  const cap50perc = [140, 141]; 
+  const cap95perc = [180, 181]; 
   
 
   const lottieRefs = [
@@ -15,9 +19,9 @@ function Game() {
     useRef(null)
   ];
 
-  const playAnimation = (index) => {
+  const playAnimation = (index, startAnim) => {
     if (lottieRefs[index].current) {
-      lottieRefs[index].current.play();
+      lottieRefs[index].current.playSegments([startAnim, 242], true);
     }
   };
 
@@ -59,11 +63,12 @@ function Game() {
           <div className="game__winner">
             <div className="game__winners_icon first"><span>🥈</span></div>
             <div className="game__winners_cap">
-            <div className="game__winners_capanime" onClick={() => playAnimation(0)}>
+            <div className="game__winners_capanime" onClick={() => playAnimation(0, cap20perc[0])}>
                 <Lottie animationData={AnimationBeer}
                         lottieRef={lottieRefs[0]}
                         loop={false}
                         autoplay={false}
+                        initialSegment={cap20perc}
                 />
               </div>
             </div>
@@ -74,11 +79,12 @@ function Game() {
           <div className="game__winner">
             <div className="game__winners_icon second"><span>🏆</span></div>
             <div className="game__winners_cap">
-            <div className="game__winners_capanime" onClick={() => playAnimation(1)}>
+            <div className="game__winners_capanime" onClick={() => playAnimation(1, cap50perc[0])}>
                 <Lottie animationData={AnimationBeer}
                         lottieRef={lottieRefs[1]}
                         loop={false}
                         autoplay={false}
+                        initialSegment={cap50perc}
                 />
               </div>
                 </div>
@@ -90,12 +96,12 @@ function Game() {
           <div className="game__winner">
             <div className="game__winners_icon third"><span>🤡</span></div>
             <div className="game__winners_cap">
-            <div className="game__winners_capanime" onClick={() => playAnimation(2)}>
+            <div className="game__winners_capanime"  onClick={() => playAnimation(2, cap95perc[0])}>
                 <Lottie animationData={AnimationBeer}
                         lottieRef={lottieRefs[2]}
                         loop={false}
                         autoplay={false}
-                        className="cap__animation"
+                        initialSegment={cap95perc}
                 />
               </div>
             </div>
