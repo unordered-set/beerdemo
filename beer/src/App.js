@@ -8,7 +8,7 @@ import Tokenomics from "./components/tokenomics/Tokenomics";
 import Roadmap from "./components/roadmap/Roadmap";
 import Footer from "./components/footer/Footer";
 import Game from "./components/Game/Game";
-import WalletInfo from "./components/walletinfo/WalletInfo";
+// import WalletInfo from "./components/walletinfo/WalletInfo";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
 
       <Header />
       <Main />
-      <WalletInfo/> 
+      {/* <WalletInfo/>  */}
       <Game />
       <Info />
       <Games />
