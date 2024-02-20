@@ -1,9 +1,15 @@
 import logoX from './../../img/social_logo_svg/X.svg'
 import logoTelegram from './../../img/social_logo_svg/Telegram.svg'
 
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import { useConnection, useWallet } from '@solana/wallet-adapter-react';
+
+
 import './header.css'
 
-function Header () {
+function Header() {
+    const { connection } = useConnection();
+    const { publicKey, sendTransaction } = useWallet();
     return (
         <header className='header'>
             <div className="container">
@@ -16,11 +22,16 @@ function Header () {
                             <li><a href="#roadmap">RM</a></li>
                         </ul>
                     </nav>
-                    <div className="header__links"><ul>
+                    {/* <div>
+                            <WalletMultiButton />
+                        </div> */}
+                    <div className="header__links">
+
+                        <ul>
                             <li><a href="https://twitter.com/BeerTheHold"><img src={logoX} alt="" /></a></li>
                             <li><a href="https://t.me/HoldtHeBeer"><img src={logoTelegram} alt="" /></a></li>
                         </ul></div>
-                    
+
                 </div>
             </div>
         </header>

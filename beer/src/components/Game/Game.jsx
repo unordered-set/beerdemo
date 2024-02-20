@@ -6,7 +6,14 @@ import AnimationBeer from "./AnimationBeer.json";
 import { useRef } from "react";
 
 
+import { useConnection, useWallet } from '@solana/wallet-adapter-react';
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+
+
 function Game() {
+
+  const { connection } = useConnection();
+  const { publicKey, sendTransaction } = useWallet();
 
   const cap20perc = [110, 111]; 
   const cap50perc = [140, 141]; 
@@ -111,7 +118,9 @@ function Game() {
 
         </div>
         <div className="game__connect">
-            <h1>CONNECT WALLET</h1>
+
+            <WalletMultiButton className="game__connectbutton"></WalletMultiButton>
+
         </div>
       </div>
     </section>
