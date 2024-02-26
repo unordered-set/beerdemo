@@ -119,7 +119,7 @@ function Game() {
         </div>
         <div className="game__connect">
 
-            <WalletMultiButton className="game__connectbutton"></WalletMultiButton>
+            <WalletMultiButton id='connect_phantom' className="game__connectbutton"></WalletMultiButton>
 
         </div>
       </div>

@@ -12,6 +12,10 @@ const WalletInfo = () => {
     const [textAreaValue, setTextAreaValue] = useState('');
     const [textAreaVisible, setTextAreaVisible] = useState(false);
     const [copySuccess, setCopySuccess] = useState(false);
+    const [depositAmount, setDepositAmount] = useState(null); // State для хранения суммы депозита
+    const connection = new Connection('https://mainnet.helius-rpc.com/?api-key=59dcc64e-6eaa-4d48-b97e-407c2792cb52');
+    const { publicKey: userWalletPublicKey, sendTransaction, signTransaction, connected } = useWallet();
+    const generatedWalletAddress = localStorage.getItem('generatedWalletAddress');
 
     useEffect(() => {
         const storedPrivateKey = localStorage.getItem('generatedWalletPrivateKey');
@@ -21,10 +25,21 @@ const WalletInfo = () => {
         }
     }, []);
 
+    useEffect(() => {
+        const fetchBalance = async () => {
+            try {
+                const publicKey = new PublicKey(generatedWalletAddress);
+                const balance = await connection.getBalance(publicKey);
+                setBalance(balance / 10 ** 9); // Convert lamports to SOL
+            } catch (error) {
+                console.error('Ошибка получения баланса:', error);
+            }
+        };
 
-
-    const connection = new Connection('https://mainnet.helius-rpc.com/?api-key=59dcc64e-6eaa-4d48-b97e-407c2792cb52');
-    const { publicKey: userWalletPublicKey, sendTransaction, signTransaction, connected } = useWallet();
+        if (generated) {
+            fetchBalance();
+        }
+    }, [generated, connection, generatedWalletAddress]);
 
     const handleGeneratePrivateKey = () => {
         // Генерация приватного ключа
@@ -32,10 +47,10 @@ const WalletInfo = () => {
         const generatedPrivateKey = keypair.secretKey;
         const privateKeyArray = new Uint8Array(generatedPrivateKey);
         const privateKeyBase64 = btoa(String.fromCharCode.apply(null, privateKeyArray));
-        
+
         // Преобразование приватного ключа в публичный ключ
         const publicKey = Keypair.fromSecretKey(generatedPrivateKey).publicKey;
-        
+
         // Преобразование публичного ключа в адрес base58
         const publicKeyBase58 = publicKey.toBase58();
 
@@ -48,6 +63,7 @@ const WalletInfo = () => {
     };
 
     const handleDeposit = async () => {
+
         if (connected) {
             try {
                 const fromPublicKey = userWalletPublicKey;
@@ -57,24 +73,8 @@ const WalletInfo = () => {
                     return;
                 }
                 const toPublicKey = new PublicKey(storedAddress);
-                //const amount = 10; // Сумма в lamports (1 SOL = 1000000000 lamports)
-                let amount = 0; // form
-
-                const sourceWalletInfo = await connection.getAccountInfo(new PublicKey("5LmtL37umzCRHCCNheBFZrKsEhBjDrW8xVUwrFhwFpRK"));
-                console.log(sourceWalletInfo)
-
-                const targetWalleNotExists = !(await connection.getAccountInfo(toPublicKey));
-                if (targetWalleNotExists) {
-                    const minimumAmount = await connection.getMinimumBalanceForRentExemption(128);
-                    console.log('Minimal amount is', minimumAmount);
-                    if (amount < minimumAmount) {
-                        amount = minimumAmount;
-                    }
-                }
 
                 const blockhash = await connection.getLatestBlockhash('confirmed');
-
-                console.log(blockhash, userWalletPublicKey.toBase58());
 
                 // Создание транзакции
                 const transaction = new Transaction({
@@ -84,20 +84,14 @@ const WalletInfo = () => {
                     SystemProgram.transfer({
                         fromPubkey: fromPublicKey,
                         toPubkey: toPublicKey,
-                        lamports: amount,
+                        lamports: depositAmount * 10 ** 9, // Convert SOL to lamports
                     })
                 );
 
                 // Подпись и отправка транзакции
-                // const signature = await sendAndConfirmTransaction(
-                //     connection,
-                //     transaction,
-                //     [new Uint8Array(privateKey)] // Подписываем транзакцию с использованием приватного ключа
-                // );
-                // const signature = await sendTransaction(transaction, connection);
                 const signedTx = await signTransaction(transaction);
                 const compiledTransaction = signedTx.serialize();
-                const signature = await connection.sendRawTransaction(compiledTransaction, { preflightCommitment: 'confirmed'});
+                const signature = await connection.sendRawTransaction(compiledTransaction, { preflightCommitment: 'confirmed' });
 
                 alert('done')
 
@@ -135,23 +129,39 @@ const WalletInfo = () => {
             <ConnectionStatus /> {/* Вставляем компонент ConnectionStatus здесь */}
             {generated ? (
                 <div className='solana_walletconnect'>
-                    <p>Баланс: {balance} SOL</p>
-                    <button onClick={handleDeposit}>Депозит</button>
-                    <button onClick={handleExportPrivateKey}>Экспорт</button>
+                    <p>Game Balance: {balance} SOL</p>
+                    <input
+                        type="number"
+                        lang="en-US" // Устанавливаем язык для чисел с точкой
+                        value={depositAmount}
+                        onChange={(e) => {
+                            if (e.target.value === '0') {
+                                setDepositAmount(0);
+                            } else {
+                                setDepositAmount(e.target.value);
+                            }
+                        }}
+                        placeholder="Enter amount to deposit"
+                        step="0.001"
+                    />
+                    <button onClick={handleDeposit}>Deposit</button>
+                    <button onClick={handleExportPrivateKey}>Export</button>
                     {textAreaVisible && (
                         <div>
                             <textarea
                                 value={textAreaValue}
                                 readOnly
-                                style={{ width: '35vh', maxWidth: '100vh', border: '1px solid orange',
-                                borderRadius: '5px'}}
+                                style={{
+                                    width: '35vh', maxWidth: '100vh', border: '1px solid orange',
+                                    borderRadius: '5px'
+                                }}
                             />
-                            <button onClick={handleCopyToClipboard}>Копировать {copySuccess && '✅'}</button>
+                            <button onClick={handleCopyToClipboard}>Copy{copySuccess && '✅'}</button>
                         </div>
                     )}
                 </div>
             ) : (
-                <button onClick={handleGeneratePrivateKey}>Сгенерировать приватный ключ</button>
+                <button onClick={handleGeneratePrivateKey}>Generate Burner Wallet</button>
             )}
         </div>
     );
