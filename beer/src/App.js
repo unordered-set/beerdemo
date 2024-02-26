@@ -8,8 +8,9 @@ import Tokenomics from "./components/tokenomics/Tokenomics";
 import Roadmap from "./components/roadmap/Roadmap";
 import Footer from "./components/footer/Footer";
 import Game from "./components/Game/Game";
-// import WalletInfo from "./components/walletinfo/WalletInfo";
+import WalletInfo from "./components/walletinfo/WalletInfo";
 import React, { useMemo } from 'react';
+
 
 import { clusterApiUrl } from '@solana/web3.js';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
@@ -24,9 +25,9 @@ require('@solana/wallet-adapter-react-ui/styles.css');
 
 function App() {
 
-  // you can use Mainnet, Devnet or Testnet here
+    // you can use Mainnet, Devnet or Testnet here
   const solNetwork = WalletAdapterNetwork.Mainnet;
-  const endpoint = useMemo(() => clusterApiUrl(solNetwork), [solNetwork]);
+  const endpoint = 'https://api.mainnet-beta.solana.com'; // useMemo(() => clusterApiUrl(solNetwork), [solNetwork]);
   // initialise all the wallets you want to use
   const wallets = useMemo(
       () => [
@@ -43,7 +44,7 @@ function App() {
 
       <Header />
       <Main />
-      {/* <WalletInfo/>  */}
+      <WalletInfo/>  
       <Game />
       <Info />
       <Games />
