@@ -1,17 +1,20 @@
 .solana_wallet {
-    border: 4px solid rgb(255, 117, 5);
-
+    border: 8px solid rgb(255, 117, 5);
     flex-direction: column;
     background-color: black;
     color: aliceblue;
     height: 30vh;
+    margin: 0 auto;
+
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 10%;
-    padding: 5vh;
+    gap: 2%;
+    padding: 1vh;
 }
+
+
 
 .solana_walletconnect > p {
     line-height: 20px;
@@ -23,7 +26,8 @@
     gap: 5%;
     text-align: center;
     justify-content: center;
-    
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .solana_walletconnect > input {
@@ -32,11 +36,25 @@
     border: 1px solid orange; /* Ярко-оранжевая рамка */
     border-radius: 5px; /* Скругленные углы */
     max-width: 80%;
-    margin: 0 auto;
-    
+    margin: 0 auto;   
 }
 
-@media screen and (max-width: 767px) {
+@keyframes blinking {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .blinking {
+    animation: blinking 1.6s infinite;
+  }
+
+  .game__connect {
+    margin-bottom: 6vh;
+  }
+  
+
+@media screen and (max-width: 1220px) {
 
 .solana_walletconnect {
     flex-direction: column;
@@ -45,3 +63,10 @@
     justify-content: center;
     
 }}
+
+.solana_wallet {
+
+    height: 46vh;
+
+    padding: 2vh;
+}

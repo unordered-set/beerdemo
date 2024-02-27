@@ -15,10 +15,10 @@ function Game() {
   const { connection } = useConnection();
   const { publicKey, sendTransaction } = useWallet();
 
-  const cap20perc = [110, 111]; 
-  const cap50perc = [140, 141]; 
-  const cap95perc = [180, 181]; 
-  
+  const cap20perc = [110, 111];
+  const cap50perc = [140, 141];
+  const cap95perc = [180, 181];
+
 
   const lottieRefs = [
     useRef(null),
@@ -35,6 +35,9 @@ function Game() {
   return (
     <section className="Game">
       <div className="container">
+        <div className="game__connect">
+          <WalletMultiButton id='connect_phantom' className="game__connectbutton"></WalletMultiButton>
+        </div>
         <div className="game__headerblock">
           <h1>GAME</h1>
           <h2>Pour beer, place bet and win SOL</h2>
@@ -70,45 +73,45 @@ function Game() {
           <div className="game__winner">
             <div className="game__winners_icon first"><span>🥈</span></div>
             <div className="game__winners_cap">
-            <div className="game__winners_capanime" onClick={() => playAnimation(0, cap20perc[0])}>
+              <div className="game__winners_capanime" onClick={() => playAnimation(0, cap20perc[0])}>
                 <Lottie animationData={AnimationBeer}
-                        lottieRef={lottieRefs[0]}
-                        loop={false}
-                        autoplay={false}
-                        initialSegment={cap20perc}
+                  lottieRef={lottieRefs[0]}
+                  loop={false}
+                  autoplay={false}
+                  initialSegment={cap20perc}
                 />
               </div>
             </div>
             <div className="game__winners_place first_place" id="winners_place0"></div>
             <div className="game__winners_points"><h1>543</h1></div>
           </div>
-          
+
           <div className="game__winner">
             <div className="game__winners_icon second"><span>🏆</span></div>
             <div className="game__winners_cap">
-            <div className="game__winners_capanime" onClick={() => playAnimation(1, cap50perc[0])}>
+              <div className="game__winners_capanime" onClick={() => playAnimation(1, cap50perc[0])}>
                 <Lottie animationData={AnimationBeer}
-                        lottieRef={lottieRefs[1]}
-                        loop={false}
-                        autoplay={false}
-                        initialSegment={cap50perc}
+                  lottieRef={lottieRefs[1]}
+                  loop={false}
+                  autoplay={false}
+                  initialSegment={cap50perc}
                 />
               </div>
-                </div>
+            </div>
 
             <div className="game__winners_place second_place" id="winners_place1"></div>
             <div className="game__winners_points"><h1>302</h1></div>
           </div>
-          
+
           <div className="game__winner">
             <div className="game__winners_icon third"><span>🤡</span></div>
             <div className="game__winners_cap">
-            <div className="game__winners_capanime"  onClick={() => playAnimation(2, cap95perc[0])}>
+              <div className="game__winners_capanime" onClick={() => playAnimation(2, cap95perc[0])}>
                 <Lottie animationData={AnimationBeer}
-                        lottieRef={lottieRefs[2]}
-                        loop={false}
-                        autoplay={false}
-                        initialSegment={cap95perc}
+                  lottieRef={lottieRefs[2]}
+                  loop={false}
+                  autoplay={false}
+                  initialSegment={cap95perc}
                 />
               </div>
             </div>
@@ -117,11 +120,7 @@ function Game() {
           </div>
 
         </div>
-        <div className="game__connect">
 
-            <WalletMultiButton id='connect_phantom' className="game__connectbutton"></WalletMultiButton>
-
-        </div>
       </div>
     </section>
   );

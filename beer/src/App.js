@@ -44,7 +44,7 @@ function App() {
 
       <Header />
       <Main />
-      {/* <WalletInfo/>   */}
+      <WalletInfo/>  
       <Game />
       <Info />
       <Games />
