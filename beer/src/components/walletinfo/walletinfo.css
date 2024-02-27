@@ -5,7 +5,6 @@
     color: aliceblue;
     height: 30vh;
     margin: 0 auto;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +15,7 @@
 
 
 
-.solana_walletconnect > p {
+.solana_walletconnect>p {
     line-height: 20px;
 
 }
@@ -30,43 +29,60 @@
     margin: 0 auto;
 }
 
-.solana_walletconnect > input {
-    background-color: #333; /* Темно-серый фон */
-    padding: 5px; /* Отступы внутри блока */
-    border: 1px solid orange; /* Ярко-оранжевая рамка */
-    border-radius: 5px; /* Скругленные углы */
+.solana_walletconnect>input {
+    background-color: #333;
+    /* Темно-серый фон */
+    padding: 5px;
+    /* Отступы внутри блока */
+    border: 1px solid orange;
+    /* Ярко-оранжевая рамка */
+    border-radius: 5px;
+    /* Скругленные углы */
     max-width: 80%;
-    margin: 0 auto;   
+    margin: 0 auto;
 }
 
 @keyframes blinking {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  .blinking {
-    animation: blinking 1.6s infinite;
-  }
+    0% {
+        opacity: 1;
+    }
 
-  .game__connect {
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.blinking {
+    animation: blinking 1.6s infinite;
+}
+
+.game__connect {
     margin-bottom: 6vh;
-  }
-  
+}
+
 
 @media screen and (max-width: 1220px) {
 
-.solana_walletconnect {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-    justify-content: center;
-    
-}}
+    .solana_walletconnect {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        justify-content: center;
+
+    }
+}
 
 .solana_wallet {
 
     height: 46vh;
 
     padding: 2vh;
+}
+
+.solana_wallet {
+    height: 44vh;
 }
