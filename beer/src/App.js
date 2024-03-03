@@ -11,8 +11,6 @@ import Game from "./components/Game/Game";
 import WalletInfo from "./components/walletinfo/WalletInfo";
 import React, { useMemo } from 'react';
 
-
-import { clusterApiUrl } from '@solana/web3.js';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import {
     PhantomWalletAdapter,
